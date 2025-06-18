@@ -1,11 +1,21 @@
-#pragma once
+#ifndef LOADER_MARKET_DATA_LOADER_H
+#define LOADER_MARKET_DATA_LOADER_H
+
+#include <string>
+#include <vector>
 
 namespace riskengine {
-    
-class marketDataLoader {
+
+/**
+ * Abstract base class defining an interface to load market data.
+ */
+class MarketDataLoader {
 public: 
-    virtual void retrieveMarketData(/* params */) = 0;
+    virtual void retrieveMarketData() = 0;
+    virtual ~MarketDataLoader() = default;
 };
 
 
 } // namespace riskengine
+
+#endif // LOADER_MARKET_DATA_LOADER_H
